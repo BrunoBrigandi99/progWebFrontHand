@@ -1,0 +1,53 @@
+<body class="home">
+
+  <div class="logo-container">
+    <img id="logo" src='src\assets\logo.png' alt="Foto logo">
+    <h1><strong>Comincia anche tu a Comprare e Vendere Immobili</strong></h1>
+  </div>
+
+  <form>
+    <mat-form-field class="barra">
+      <mat-label>Cerca qui...</mat-label>
+      <input matInput #message maxlength="256" placeholder="Es. Casa in Calabria">
+    </mat-form-field>
+    <div class="bottone">
+      <button mat-fab extended color="primary">
+        <mat-icon>search</mat-icon>
+        Cerca
+      </button>
+    </div>
+  </form>
+
+  <br>
+
+  <div style="text-align: center;">
+    <h1><strong>{{tipo_annuncio}}</strong></h1>
+  </div>
+
+  <br>
+
+
+  <mat-grid-list cols="3" rowHeight="480px">
+    <mat-grid-tile *ngFor="let casa of case">
+      <mat-card class="cards">
+        <mat-card-header>
+          <img mat-card-avatar src="{{casa.immagine}}" alt="Foto di una casa">
+          <mat-card-title>{{casa.nome}}</mat-card-title>
+          <mat-card-subtitle>{{casa.regione}}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="{{casa.immagine}}" alt="Foto di una casa">
+        <mat-card-content>
+          <p>
+            {{casa.descrizione}}
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-icon-button><mat-icon>thumb_up</mat-icon></button>
+          <button mat-icon-button><mat-icon>share</mat-icon></button>
+        </mat-card-actions>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+
+
+</body>
