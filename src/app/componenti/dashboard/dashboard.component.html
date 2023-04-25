@@ -1,9 +1,25 @@
 <div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
   <mat-toolbar  class="example-toolbar">
-    <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
+    <ng-template *ngIf="isMobile(); then bloccoIf else bloccoElse"> //*ngIf="isAuthenticated()"// </ng-template>
+    <ng-template #bloccoIf>
+      <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
+    </ng-template>
+    <ng-template #bloccoElse>
+      <ul id="menu">
+        <mat-list-item routerLink="home" [routerLinkActive]="'active'">HomePage</mat-list-item>
+        <mat-list-item routerLink="privacy" [routerLinkActive]="'active'">Privacy</mat-list-item>
+        <mat-list-item routerLink="supporto" [routerLinkActive]="'active'">Supporto</mat-list-item>
+        <mat-list-item routerLink="chi-siamo" [routerLinkActive]="'active'">Chi Siamo</mat-list-item>
+      </ul>
+    </ng-template>
+
+    <!-- <button mat-icon-button (click)="snav.toggle()" ><mat-icon>menu</mat-icon></button> -->
+
     <!--<h1 class="example-app-name">Immobiliare</h1> -->
+
     <span class="example-spacer"></span>
-    <!--<ng-template *ngIf="[[accesso]]; then bloccoIf else bloccoElse"> //*ngIf="isAuthenticated()"// </ng-template>
+
+    <!--<ng-template *ngIf="isMobile()"; then bloccoIf else bloccoElse"> //*ngIf="isAuthenticated()"// </ng-template>
     <ng-template #bloccoIf>
       <button mat-icon-button role="listitem" routerLink="login" [routerLinkActive]="'active'"><mat-icon>account_circle</mat-icon></button>
     </ng-template>

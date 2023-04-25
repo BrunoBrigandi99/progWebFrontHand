@@ -42,3 +42,10 @@ mat-toolbar{
 strong{
   color:#259be2;
 }
+
+ul{
+  display: flex;
+  text-align: center;
+  text-decoration: overline;
+  width: 800px;
+}

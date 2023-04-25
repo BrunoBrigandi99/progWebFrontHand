@@ -25,6 +25,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatInputModule} from '@angular/material/input';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatGridListModule} from '@angular/material/grid-list';
+import {PlatformModule} from '@angular/cdk/platform';
 
 
 @NgModule({
@@ -38,6 +39,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
     HomeComponent,
     RegistrazioneComponent,
     ProfiloComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -56,6 +58,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
     MatInputModule,
     MatMenuModule,
     MatGridListModule,
+    PlatformModule,
 
   ],
   providers: [],
