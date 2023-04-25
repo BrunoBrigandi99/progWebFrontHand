@@ -1,10 +1,5 @@
 import { ChangeDetectorRef, Component, Injectable, OnDestroy } from '@angular/core';
 import {MediaMatcher} from '@angular/cdk/layout';
-import { Platform } from '@angular/cdk/platform';
-
-@Injectable({
-  providedIn:'root'
-})
 
 @Component({
   selector: 'app-dashboard',

@@ -7,13 +7,15 @@
 .logo-container{
   width: 100%;
   text-align: center;
-  /*background-image: url('src\assets\ok_logo_casagruppo.it.png');
+  /*background-image: url('src\assets\logo.jpg');
   background-repeat: no-repeat;
   background-size: center;*/
+
 }
 
 #logo{
-  width: 50%;
+  width: 80%;
+  height: 50%;
 }
 
 form {
@@ -21,25 +23,29 @@ form {
   margin-top: 2%;
   width: 100%;
   text-align: center;
+  align-items: center;
+}
+
+.bottone{
+  padding-bottom: 20px;
 }
 
 .barra{
   width: 77%;
-  margin-left: 10%;
 }
-.bottone{
-  margin-top: 7px;
-}
+
 
 /*.cards-container{
   background-color: aqua;
 }*/
 
+.mat-grid-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .cards {
   width: 100%;
-  height: 100%;
-  margin-right: 10px;
-  margin-top: 10px;
 }
 
 .example-header-image {
